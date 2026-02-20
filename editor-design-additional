@@ -1,0 +1,28 @@
+/* Category Image Square Fix */
+.z-taxonomy-image,
+.z-taxonomy-image img {
+  width: 150px !important;
+  height: 150px !important;
+  max-height: 150px !important;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  border-radius: 16px;
+  border: solid 1px #abb8c3;
+}
+.wp-block-navigation:not(.has-background) .wp-block-navigation__submenu-container {
+  background-color: black;
+  color: white;
+}
+.home-search div {
+  background-color: rgb(54, 64, 67);
+}
+.home-search label.wp-block-search__label {
+  color: #999;
+  background-color: unset;
+}
+.home-search div input.wp-block-search__input {
+  border-color: #000;
+  background-color: #111;
+  color: #999;
+}
