@@ -1,3 +1,80 @@
+.amc-float .amc-float-launcher {
+	background-color: #364043;
+	border: 3px solid black;
+	color: #6a717a;
+}
+.amc-float .amc-chat .amc-chat-header {
+	border-top: 3px solid black;
+		border-left: 3px solid black;
+		border-right: 3px solid black;
+	border-top-left-radius: 16px !important;
+	border-top-right-radius: 16px !important;
+	background-color: #364043 !important;
+	color: #abb8c3;
+	font-size:0;
+}
+.amc-float .amc-chat .amc-chat-header::before {
+	color: #abb8c3;
+	font-size: 12pt;
+	content: "Cognitive System Search"
+}
+
+.amc-float .amc-chat .amc-chat-window {
+	background-color: #111111;
+	color: #6a717a;
+	border: 1px solid #6a717a;
+}
+
+.amc-float .amc-chat .amc-bubble.amc-user {
+	background-color: #6a717a;
+	color: #000000;
+	border: 1px solid #000000;
+	text-align: right;
+}
+.amc-float .amc-chat .amc-bubble.amc-user::after {
+  content: " 🕶️";
+	font-size: larger;
+}
+.amc-float .amc-chat .amc-bubble.amc-info {
+	background-color: #202527;
+	color: #6a717a;
+	border: 1px solid #000000;
+	text-align: center;
+}
+.amc-float .amc-chat .amc-bubble.amc-bot {
+	background-color: #000000;
+	color: #abb8c3;
+	border: 1px solid #313133;
+}
+.amc-float .amc-chat .amc-bubble.amc-bot::before {
+  content: "🤖 ";
+	font-size: larger;
+}
+.amc-float .amc-chat .amc-chat-window::after {
+	font-size: xx-small;
+	content: " Note: This search tool isn’t perfect. The material on this site spans decades, and not everything is current or complete. Some results may reflect earlier views or outdated context. I reserve the right to evolve, revise, and rethink over time."
+}
+.amc-user-question {
+	background-color: #6a717a;
+	color: #000000;
+	border: 3px solid #000000;
+	text-align: right;
+	border-radius: 16px;
+}
+.amc-user-question:focus {
+	border: 3px solid #000000;
+	animation: none;
+}
+.amc-send-btn {
+	background-color: #364043;
+	border: 3px solid black;
+	color: #abb8c3;	
+	border-radius: 16px;
+}
+.amc-send-btn:hover {
+  background: #6a717a;
+	color: #ffffff;
+}
 @keyframes neonFlicker {
   0%, 18%, 22%, 25%, 53%, 57%, 100% {
     opacity: 1;
