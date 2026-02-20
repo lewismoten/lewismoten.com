@@ -1,0 +1,138 @@
+@keyframes neonFlicker {
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+    opacity: 1;
+    text-shadow:
+      0 0 4px #ff2f92,
+      0 0 8px #ff2f92,
+      0 0 16px #ff2f92;
+  }
+
+  20%, 24%, 55% {
+    opacity: 0.7;
+    text-shadow:
+      0 0 2px #ff2f92,
+      0 0 4px #ff2f92;
+  }
+}
+.one-hundred-word-story strong {
+	color: #da95c2;
+  text-shadow:
+    0 0 4px #ff2f92,
+    0 0 8px #ff2f92,
+    0 0 16px #ff2f92,
+    0 0 32px rgba(255, 47, 146, 0.6);
+	animation: neonFlicker 3s infinite;
+}
+.one-hundred-word-story em::before {
+  content: "➤ ";
+	color: #6fbccc;
+  text-shadow:
+    0 0 4px #19e3ff,
+    0 0 8px #19e3ff,
+    0 0 16px #19e3ff,
+    0 0 32px rgba(25, 227, 255, 0.6);
+}
+.one-hundred-word-story em {
+	color: #6fbccc;
+  text-shadow:
+    0 0 4px #19e3ff,
+    0 0 8px #19e3ff,
+    0 0 16px #19e3ff,
+    0 0 32px rgba(25, 227, 255, 0.6);
+}
+@keyframes neonPulse {
+  0%   { text-shadow: 0 0 4px #19e3ff, 0 0 8px #19e3ff; }
+  50%  { text-shadow: 0 0 8px #19e3ff, 0 0 16px #19e3ff, 0 0 32px #19e3ff; }
+  100% { text-shadow: 0 0 4px #19e3ff, 0 0 8px #19e3ff; }
+}
+
+.one-hundred-word-story em::before {
+  animation: neonPulse 2.5s infinite ease-in-out;
+}
+.one-hundred-word-story span[style*="underline"] {
+  position: relative;
+	display: inline;
+	overflow: hidden;
+	white-space: nowrap;
+	text-decoration: underline 2px #6e2ea6 !important;
+  text-underline-offset: 3px;	
+	text-decoration-thickness: 2px;
+}
+.one-hundred-word-story span[style*="underline"]::after {
+  content: "";
+  position: absolute;
+  left: -34px;               /* tail length (negative) */
+  bottom: 0.05em;             /* underline position */
+  width: 34px;               /* tail length */
+  height: 2px;               /* underline thickness */
+
+  /* trail (left) -> line (right) */
+  background: linear-gradient(
+    to right,
+    rgba(180, 92, 255, 0.0) 0%,
+    rgba(180, 92, 255, 0.15) 40%,
+    rgba(180, 92, 255, 0.4) 80%, /* your “glow color” as the trail */
+    #b45cff 100%                 /* your “original purple line” */
+  );
+
+  /* IMPORTANT: no box-shadow here, so the trail doesn't glow */
+  animation: underlineScan 2.2s linear infinite;
+  pointer-events: none;
+}
+@keyframes underlineScan {
+  from { left: -34px; }
+  to   { left: calc(100%); }
+}
+@keyframes underlinePulse {
+  0%, 100% {
+    opacity: 0.8;
+    transform: scaleX(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scaleX(1.05);
+  }
+}
+.one-hundred-word-story > :last-child::after {
+  content: "";
+  display: inline-block;
+  width: 0.9em;
+  height: 0.9em;
+  margin-left: 0.3em;
+  vertical-align: middle;
+
+  background-color: #19e3ff; /* base cyan */
+
+  background-image: url("/wp-content/uploads/2026/02/2026-02-15-Lewie-66-percent-4-1v-noise-CRT-Overlay.png");
+  background-size: 80px 80px;
+  background-repeat: repeat;
+
+  background-blend-mode: overlay;
+  box-shadow:
+    0 0 6px rgba(25,227,255,0.6),
+    0 0 14px rgba(25,227,255,0.35);
+
+  animation: blink 1.2s steps(1) infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+.one-hundred-word-story {
+  position: relative;
+  overflow: hidden; /* important */
+}
+
+.one-hundred-word-story::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: 
+		radial-gradient(
+    ellipse at center,
+    rgba(0, 0, 0, 0) 55%,
+    rgba(0, 0, 0, 0.35) 78%,
+    rgba(0, 0, 0, 0.65) 100%
+  );
+}
