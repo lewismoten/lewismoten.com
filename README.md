@@ -1,3 +1,5 @@
+![lewismoten.com: Website custom CSS](docs/images/social-preview.png)
+
 # lewismoten.com
 
 Custom styling for my website, [lewismoten.com](https://lewismoten.com):
